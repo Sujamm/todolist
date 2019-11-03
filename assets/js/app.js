@@ -5,7 +5,7 @@ $("ul").on("click", "li", function() {
 
 //Click on X to delete a task
 $("ul").on("click", "span", function(event) {
-    $(this).parent().fadeOut(1000, function() {
+    $(this).parent().fadeOut(500, function() {
         $(this).remove();
     });
     event.stopPropagation();
@@ -16,6 +16,11 @@ $("input[type=text]").keypress(function(event) {
         //Grabbing the value of the input
         var todoText = $(this).val();
         //create a new li to add a new task
-        $("ul").append("<li><span>X</span> " + todoText + "</li>");
+        $("ul").append("<li><span><i class='fas fa-trash-alt'></i></span> " + todoText + "</li>");
+        $(this).val("");
     }
+});
+
+$(".fa-plus").click(function() {
+    $("input[type=text]").fadeToggle();
 });
