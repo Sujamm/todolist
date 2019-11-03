@@ -73,7 +73,8 @@ li:hover span {
     text-decoration: line-through;
 }
 
-.fa-plus {
+.fa-plus,
+.fa-minus {
     float: right;
 }
 

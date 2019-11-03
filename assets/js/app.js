@@ -21,6 +21,16 @@ $("input[type=text]").keypress(function(event) {
     }
 });
 
-$(".fa-plus").click(function() {
+$("h1 i").click(function() {
     $("input[type=text]").fadeToggle();
+});
+
+$("h1 i").click(function() {
+    if ($(this).attr("class") === "fa fa-plus") {
+        $(this).removeClass("fa fa-plus");
+        $(this).addClass("fa fa-minus");
+    } else {
+        $(this).removeClass("fa fa-minus");
+        $(this).addClass("fa fa-plus");
+    }
 });
